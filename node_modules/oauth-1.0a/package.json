@@ -1,0 +1,31 @@
+{
+  "name": "oauth-1.0a",
+  "version": "1.0.1",
+  "description": "OAuth 1.0a Request Authorization for Node and Browser.",
+  "scripts": {
+    "test": "make test"
+  },
+  "main": "oauth-1.0a.js",
+  "repository": "https://github.com/ddo/oauth-1.0a.git",
+  "keywords": [
+    "oauth",
+    "1.0a",
+    "oauth1.0a",
+    "authorize",
+    "signature",
+    "nonce",
+    "consumer"
+  ],
+  "author": "Ddo",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.17.0",
+    "chai": "~1.8.1",
+    "request": "~2.33.0",
+    "istanbul": "^0.2.7",
+    "coveralls": "^2.10.0"
+  },
+  "dependencies": {
+    "crypto-js": "~3.1.2-2"
+  }
+}

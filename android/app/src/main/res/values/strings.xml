@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MStore Pro</string>
+    <string name="fb_app_id">422035778152242</string>
+    <string name="fb_login_protocol_scheme">fb422035778152242</string>
+</resources>

@@ -1,0 +1,75 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// get the latest version from - https://developers.google.com/android/guides/setup
+def googlePlayServicesVersion = '15.0.1'
+
+buildscript {
+    ext {
+        buildToolsVersion = "27.0.3"
+        minSdkVersion = 21
+        compileSdkVersion = 27
+        targetSdkVersion = 26
+        supportLibVersion = "27.1.1"
+    }
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven { url 'https://plugins.gradle.org/m2/' }
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'com.google.gms:google-services:3.0.0'
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.10.0, 0.99.99]'
+    }
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        jcenter()
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url "$rootDir/../node_modules/react-native/android"
+        }
+        google()
+    }
+     configurations.all {
+             resolutionStrategy {
+                //  force 'com.facebook.android:facebook-android-sdk:4.22.1'
+
+                 // react-native-admob
+                 force "com.google.android.gms:play-services-ads:$googlePlayServicesVersion"
+
+                 // force "com.google.android.gms:play-services-base:$googlePlayServicesVersion"
+                 // force "com.google.android.gms:play-services-maps:$googlePlayServicesVersion"
+
+                 // react-native-onesignal
+                 force "com.google.android.gms:play-services-gcm:$googlePlayServicesVersion"
+                 force "com.google.android.gms:play-services-analytics:15.0.2"
+                 force "com.google.android.gms:play-services-location:$googlePlayServicesVersion"
+
+                 // react-native-google-sign-in
+                 force "com.google.android.gms:play-services-auth:$googlePlayServicesVersion"
+             }
+         }
+}
+
+subprojects { subproject ->
+    afterEvaluate{
+        if((subproject.plugins.hasPlugin('android') || subproject.plugins.hasPlugin('android-library'))) {
+            android {
+                compileSdkVersion rootProject.ext.compileSdkVersion
+                buildToolsVersion rootProject.ext.buildToolsVersion
+            }
+        }
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.4'
+    distributionUrl = distributionUrl.replace("bin", "all")
+}

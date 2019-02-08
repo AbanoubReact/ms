@@ -1,0 +1,7 @@
+#Thu Feb 07 10:59:11 PST 2019
+base.0=/Users/cissp/Desktop/mstore-3.6.8/mstore-pro/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.1=classes2.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/Users/cissp/Desktop/mstore-3.6.8/mstore-pro/android/app/build/intermediates/transforms/dexMerger/debug/0
