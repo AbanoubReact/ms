@@ -53,15 +53,19 @@ export default StyleSheet.create({
   panelTwo: {
     position: "relative",
     width: 180,
-    alignItems: "flex-start",
+    alignItems:"center",
     justifyContent: "space-around",
     marginBottom: 12,
     marginLeft: 15,
+    borderColor: '#54a6b0',
+    borderWidth:.9,
+    padding:2,
+    
   },
   imagePanelTwo: {
     position: "relative",
     backgroundColor: "#F6F6F8",
-    width: 180,
+    width: 170,
     height: 150,
   },
   nameTwo: {
@@ -70,13 +74,13 @@ export default StyleSheet.create({
     marginTop: 8,
     marginBottom: 4,
     fontFamily: Constants.fontFamilyBold,
-    textAlign: I18nManager.isRTL ? "right" : "left",
+    textAlign: "center",
     color: Color.Text,
   },
   panelTwoHigh: {
     position: "relative",
     width: 180,
-    alignItems: "flex-start",
+    alignItems: "flex-end",
     justifyContent: "space-around",
     marginBottom: 12,
     marginLeft: 15,
@@ -90,7 +94,7 @@ export default StyleSheet.create({
   panelThree: {
     position: "relative",
     width: 120,
-    alignItems: "flex-start",
+    alignItems: "flex-end",
     justifyContent: "space-around",
     marginBottom: 12,
     marginLeft: 15,
@@ -101,7 +105,7 @@ export default StyleSheet.create({
     width: 120,
     height: 150,
     borderRadius: 3,
-    alignSelf: "flex-start",
+    alignItems: "flex-end",
     backgroundColor: "#F6F6F8",
   },
   nameThree: {
@@ -110,8 +114,8 @@ export default StyleSheet.create({
     marginTop: 8,
     lineHeight: Platform.OS == "android" ? 24 : 20,
     color: "#212121",
-    fontFamily: Constants.fontFamilyBold,
-    alignSelf: "flex-start",
+    fontFamily: 'OpenSans',
+    alignItems: "flex-end",
   },
   descriptionThree: {
     fontSize: 9,
@@ -126,6 +130,8 @@ export default StyleSheet.create({
   },
   panelMini: {
     width,
+    alignItems: "flex-end",
+
   },
   imageMini: {
     width,
@@ -135,7 +141,7 @@ export default StyleSheet.create({
   panelCard: {
     width: width - 50,
     position: "relative",
-    alignItems: "flex-start",
+    alignItems: "flex-end",
     justifyContent: "space-around",
     marginLeft: 15,
     marginBottom: 20,
@@ -153,7 +159,7 @@ export default StyleSheet.create({
   nameCard: {
     fontSize: 15,
     width: width - 50,
-    alignSelf: "flex-start",
+    alignItems: "flex-end",
     backgroundColor: "transparent",
     color: "#212121",
     marginTop: 8,
@@ -166,7 +172,7 @@ export default StyleSheet.create({
     marginBottom: 4,
     marginLeft: 0,
     lineHeight: 14,
-    textAlign: "left",
+    textAlign: "right",
     color: "#555555",
     fontFamily: Constants.fontfamily,
   },
@@ -200,7 +206,7 @@ export default StyleSheet.create({
     height: height / 3 - 50,
     left: (width / 100) * 3,
     top: 20,
-    alignSelf: "flex-start",
+    alignItems: "flex-end",
     zIndex: 9999,
   },
   nameLocation: {
@@ -218,7 +224,7 @@ export default StyleSheet.create({
     marginRight: 12,
     color: "#999",
     fontSize: 12,
-    textAlign: I18nManager.isRTL ? "right" : "left",
+    alignItems: "flex-end",
   },
   cardOneBottom: {
     flexDirection: "row",
@@ -226,7 +232,7 @@ export default StyleSheet.create({
     height: 50,
     left: (width / 100) * 3,
     bottom: 20,
-    alignSelf: "flex-start",
+    alignItems: "flex-end",
     zIndex: 9999,
   },
   readMore: {
@@ -242,7 +248,7 @@ export default StyleSheet.create({
     marginLeft: 15,
   },
   timeTwo: {
-    alignSelf: I18nManager.isRTL ? "flex-end" : "flex-start",
+    alignItems: "flex-end",
     color: "#999",
     fontSize: 10,
     marginTop: 4,
@@ -568,6 +574,7 @@ export default StyleSheet.create({
     marginRight: 2,
     borderRadius: 6,
     height: (height * 30) / 100,
+    alignItems: "flex-end",
 
     shadowOffset: { width: 0, height: 10 },
     shadowColor: "#000",
@@ -607,6 +614,9 @@ export default StyleSheet.create({
     marginRight: 2,
     borderRadius: 9,
     height: (height * 40) / 100,
+    borderBottomWidth: 3,
+    borderBottomColor: '#666',
+    alignItems: "flex-end",
 
     shadowOffset: { width: 0, height: 10 },
     shadowColor: "#000",

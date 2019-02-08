@@ -20,11 +20,7 @@ export default class HHeader extends React.PureComponent {
 
     return (
       <View style={styles.header}>
-        <View style={styles.headerLeft}>
-          <Text style={[styles.tagHeader, { color: text }]}>
-            {Languages[config.name]}
-          </Text>
-        </View>
+
         <TouchableOpacity
           onPress={
             config.layout != Constants.Layout.circle
@@ -32,18 +28,24 @@ export default class HHeader extends React.PureComponent {
               : showCategoriesScreen
           }
           style={styles.headerRight}>
-          <Text style={[styles.headerRightText, { color: text }]}>
-            {Languages.seeAll}
-          </Text>
           <Icon
             style={styles.icon}
             color={text}
             size={20}
             name={
-              I18nManager.isRTL ? "chevron-small-left" : "chevron-small-right"
+              I18nManager.isRTL ? "chevron-small-right": "chevron-small-left" 
             }
           />
+          <Text style={[styles.headerRightText, { color: text }]}>
+            {Languages.seeAll}
+          </Text>
+          
         </TouchableOpacity>
+        <View style={styles.headerLeft}>
+          <Text style={[styles.tagHeader, { color: text }]}>
+            {Languages[config.name]}
+          </Text>
+        </View>
       </View>
     );
   }

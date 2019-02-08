@@ -79,8 +79,9 @@ export default StyleSheet.create({
   headerLeft: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "flex-start",
-    marginLeft: 15,
+    alignItems: "flex-end",
+    marginRight: 15,
+    
   },
   headerRight: {
     flex: 1 / 3,
@@ -95,6 +96,9 @@ export default StyleSheet.create({
     marginTop: 0,
     color: "#666",
     fontFamily: Constants.fontFamily,
+    textAlign: 'right',
+    
+
   },
   icon: {
     marginRight: 8,
@@ -103,9 +107,14 @@ export default StyleSheet.create({
   },
   tagHeader: {
     fontSize: 18,
-    color: "#666",
-    letterSpacing: 2,
-    fontFamily: Constants.fontHeader,
+    color: "red",
+    // letterSpacing: 2,
+    fontFamily: 'OpenSans',
+    textAlign:'right',
+    alignItems:'center',
+    borderBottomColor: '#378bfb',
+    borderBottomWidth: 2,
+    paddingBottom: 3,
   },
 
   headerLogo: {
