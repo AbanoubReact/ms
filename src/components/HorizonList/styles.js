@@ -79,13 +79,13 @@ export default StyleSheet.create({
   headerLeft: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "flex-end",
-    marginRight: 15,
+    alignItems: "flex-start",
+    marginLeft: 15,
     
   },
   headerRight: {
     flex: 1 / 3,
-    justifyContent: "flex-end",
+    justifyContent: "flex-start",
     alignItems: "center",
     marginRight: 0,
     flexDirection: "row",
@@ -96,7 +96,7 @@ export default StyleSheet.create({
     marginTop: 0,
     color: "#666",
     fontFamily: Constants.fontFamily,
-    textAlign: 'right',
+    textAlign: 'left',
     
 
   },
@@ -110,7 +110,7 @@ export default StyleSheet.create({
     color: "red",
     // letterSpacing: 2,
     fontFamily: 'OpenSans',
-    textAlign:'right',
+    textAlign:'left',
     alignItems:'center',
     borderBottomColor: '#378bfb',
     borderBottomWidth: 2,

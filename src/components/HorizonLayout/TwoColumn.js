@@ -1,10 +1,10 @@
 /** @format */
 
 import React, { PureComponent } from "react";
-import { Text, TouchableOpacity } from "react-native";
-import { Images, Styles, withTheme } from "@common";
+import { Text, TouchableOpacity , View ,Button } from "react-native";
+import { Images, Styles, withTheme , ShopButton ,Languages , Color, Constants, Tools} from "@common";
 import { WishListIcon, ImageCache, ProductPrice } from "@components";
-import { getProductImage } from "@app/Omni";
+import { getProductImage , Icon} from "@app/Omni";
 import css from "./style";
 
 class TwoColumn extends PureComponent {
@@ -33,8 +33,36 @@ class TwoColumn extends PureComponent {
         </Text>
         <ProductPrice product={product} hideDisCount />
         <WishListIcon product={product} />
+        <View style={{ flexDirection: "row" ,height:40, flex: .75,}}>
+        <TouchableOpacity
+         onPress={viewPost}
+         
+          style={
+            {
+              alignItems: 'center',
+              backgroundColor: '#54a6b0',
+              padding: 10,
+              flex:4,
+              
+            }
+          }>
+          <Text style={{marginBottom:9}}>المزيد من التفاصيل</Text>
+        </TouchableOpacity>
+        {/* <View style={{flex:4,
+        alignItems: 'center',
+          backgroundColor:'#218a96',
+        }}>
+        <Text>اضف للمفضلة</Text>
+        <WishListIcon product={product}  />
+        </View> */}
+       
+        
+        
+      </View>
       </TouchableOpacity>
+      
     );
+    
   }
 }
 

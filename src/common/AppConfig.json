@@ -13,7 +13,7 @@
     {
       "name": "featureProducts",
       "image": "",
-      "layout": 6,
+      "layout": 2,
       "categoryOrTag": 128,
       "category": 128
     },
@@ -27,14 +27,14 @@
     {
       "name": "womanBestSeller",
       "image": "",
-      "layout": 8,
+      "layout": 2,
       "categoryOrTag": 128,
       "category": 128
     },
     {
       "name": "manCollections",
       "image": "",
-      "layout": 1,
+      "layout": 2,
       "categoryOrTag": 128,
       "category": 128
     }
